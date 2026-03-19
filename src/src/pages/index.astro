@@ -3,299 +3,317 @@ import Site from '../layouts/Site.astro';
 
 const programs = [
   {
-    icon: '🎓',
     title: 'Comunidad PREMED',
-    desc: 'Diagnostica tus conocimientos del bachillerato antes de iniciar la licenciatura. Evalúa tu preparación académica de forma integral.',
+    desc: 'Diagnostica tus conocimientos del bachillerato antes de iniciar la licenciatura.',
     href: '/aprende-en-linea/premed',
     tag: 'Aspirantes',
-    tagColor: 'bg-emerald-100 text-emerald-700',
   },
   {
-    icon: '💻',
     title: 'Ponte en Líne@',
-    desc: 'Refuerza tus aprendizajes con tutorías, seminarios y recursos educativos diseñados por la Facultad de Medicina.',
+    desc: 'Refuerza tus aprendizajes con tutorías, seminarios y recursos educativos de la Facultad.',
     href: '/aprende-en-linea/ponte-en-linea',
     tag: 'Estudiantes',
-    tagColor: 'bg-blue-100 text-blue-700',
   },
   {
-    icon: '📚',
     title: 'Asignaturas en línea',
-    desc: '32 asignaturas optativas MOLIMOD disponibles a distancia con contenidos innovadores y a la vanguardia de la ciencia médica.',
+    desc: '32 asignaturas optativas MOLIMOD a distancia con contenidos a la vanguardia de la ciencia médica.',
     href: '/aprende-en-linea/asignaturas',
     tag: 'Estudiantes',
-    tagColor: 'bg-blue-100 text-blue-700',
   },
   {
-    icon: '⚡',
     title: 'Periodos intensivos',
-    desc: 'Cursa asignaturas optativas en periodos de dos semanas. Ideal para estudiantes de 1° a 4° año de Médico Cirujano.',
+    desc: 'Cursa asignaturas optativas en periodos de dos semanas, para estudiantes de 1° a 4° año.',
     href: '/aprende-en-linea/periodos-intensivos',
     tag: 'Estudiantes',
-    tagColor: 'bg-blue-100 text-blue-700',
   },
   {
-    icon: '🏥',
     title: 'FundamentaleSS',
-    desc: 'Libros electrónicos y recursos de apoyo para médicos pasantes en servicio social de la licenciatura de Médico Cirujano.',
+    desc: 'Libros electrónicos y recursos de apoyo para médicos pasantes en servicio social.',
     href: '/fundamentaless',
     tag: 'Servicio social',
-    tagColor: 'bg-purple-100 text-purple-700',
   },
   {
-    icon: '🏆',
     title: 'Logra tu Meta',
-    desc: 'Exámenes de autoevaluación gratuitos para preparar el ENARM y orientar tu formación hacia una especialidad médica.',
+    desc: 'Exámenes de autoevaluación gratuitos para preparar el ENARM y orientarte hacia una especialidad.',
     href: '/logra-tu-meta/facultad',
     tag: 'Egresados',
-    tagColor: 'bg-amber-100 text-amber-700',
   },
 ];
 
-const quickAccess = [
-  { label: 'Soy aspirante', icon: '👤', href: '/aprende-en-linea/premed', desc: 'Evalúa tu preparación' },
-  { label: 'Soy estudiante', icon: '🎒', href: '/aprende-en-linea/ponte-en-linea', desc: 'Accede a recursos' },
-  { label: 'Servicio social', icon: '🩺', href: '/fundamentaless', desc: 'FundamentaleSS' },
-  { label: 'Voy al ENARM', icon: '📋', href: '/logra-tu-meta/facultad', desc: 'Prepárate ahora' },
+const profiles = [
+  { label: 'Soy aspirante', href: '/aprende-en-linea/premed' },
+  { label: 'Soy estudiante', href: '/aprende-en-linea/ponte-en-linea' },
+  { label: 'Servicio social', href: '/fundamentaless' },
+  { label: 'Voy al ENARM', href: '/logra-tu-meta/facultad' },
 ];
 
 const stats = [
   { value: '45+', label: 'años de educación a distancia' },
-  { value: '32', label: 'asignaturas MOLIMOD disponibles' },
-  { value: '70', label: 'optativas en el sistema' },
+  { value: '32', label: 'asignaturas MOLIMOD' },
   { value: '100%', label: 'programas gratuitos' },
 ];
 ---
 
-<Site title="SUAyED | Facultad de Medicina UNAM" description="Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina, UNAM.">
-  <!-- ── HERO ───────────────────────────────────────────────── -->
-  <section class="relative overflow-hidden bg-[var(--color-unam-blue-dark)] min-h-[580px] flex items-center">
-    <!-- Background dot pattern -->
-    <div class="absolute inset-0 opacity-[0.04]"
-      style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 28px 28px;">
-    </div>
-    <!-- Gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[var(--color-unam-blue-dark)] via-[var(--color-unam-blue)] to-[#0066cc] opacity-90"></div>
-    <!-- Gold accent top line -->
-    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] via-[var(--color-unam-gold-light)] to-[var(--color-unam-gold)]"></div>
+<Site title="SUAyED | Facultad de Medicina UNAM">
 
-    <div class="container-site relative z-10 py-20 md:py-28">
-      <div class="max-w-3xl">
-        <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6">
-          <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-unam-gold)]"></div>
-          <span class="text-xs font-semibold text-white/80 tracking-wide uppercase">Sistema Universidad Abierta y Educación a Distancia</span>
-        </div>
+  <!-- ═══════════════════════════════════════════════════════
+       HERO — asimétrico, tipográfico, sin bloque de color
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-bg)] overflow-hidden border-b border-[var(--color-border)]">
+    <div class="grid lg:grid-cols-[1fr_0.85fr] gap-0 items-stretch">
 
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
-          Educación médica<br />
-          <span class="text-[var(--color-unam-gold)]">a tu alcance</span>
+      <!-- Left: headline — padded like container -->
+      <div class="flex flex-col justify-center py-20 lg:py-24 pl-[max(1.5rem,calc((100vw-1200px)/2+2.5rem))] pr-14 xl:pr-20 border-r-0 lg:border-r border-[var(--color-border)]">
+
+        <p class="eyebrow mb-5">Facultad de Medicina · UNAM</p>
+
+        <h1
+          class="display text-[clamp(3rem,6vw,5.25rem)] text-[var(--color-navy)] leading-[1.01] tracking-[-0.03em] mb-6"
+          style="font-optical-sizing: auto;"
+        >
+          Educación<br/>
+          médica<br/>
+          <em class="not-italic text-[var(--color-gold)]">a distancia</em>
         </h1>
 
-        <p class="text-lg text-white/70 leading-relaxed max-w-xl mb-10">
-          La Facultad de Medicina de la UNAM pone a tu disposición programas en línea para aprender, reforzar y avanzar en tu formación médica, sin importar en qué etapa te encuentres.
+        <span class="rule-gold mb-6"></span>
+
+        <p class="text-[var(--color-text-mid)] text-[1rem] leading-[1.75] max-w-[38ch] mb-8">
+          Programas en línea para aprender, reforzar y avanzar en tu formación médica — sin importar en qué etapa te encuentres.
         </p>
 
-        <div class="flex flex-wrap gap-3">
-          <a href="/aprende-en-linea"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-unam-gold)] text-[var(--color-unam-blue-dark)] font-bold text-sm hover:bg-[var(--color-unam-gold-dark)] transition-colors duration-150 shadow-lg">
-            Explorar programas
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href="/aprende-en-linea"
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-md)] bg-[var(--color-navy)] text-[var(--color-bg)] text-sm font-semibold hover:bg-[var(--color-navy-mid)] transition-colors duration-150"
+          >
+            Ver programas
+            <svg class="w-4 h-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <a href="/acerca-de"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-white/10 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 transition-colors duration-150">
-            Acerca de SUAyED
+          <a
+            href="/acerca-de"
+            class="text-sm font-medium text-[var(--color-text-soft)] hover:text-[var(--color-navy)] transition-colors duration-150"
+          >
+            Acerca de SUAyED →
           </a>
         </div>
       </div>
-    </div>
 
-    <!-- Decorative circles -->
-    <div class="absolute right-0 top-0 bottom-0 w-1/3 hidden xl:block overflow-hidden pointer-events-none">
-      <div class="absolute right-[-80px] top-1/2 -translate-y-1/2 w-96 h-96 rounded-full border-[40px] border-white/5"></div>
-      <div class="absolute right-16 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border-[20px] border-[var(--color-unam-gold)]/10"></div>
+      <!-- Right: editorial program index — surface tint, aligned to left column top padding -->
+      <div class="hidden lg:flex flex-col justify-between pt-24 pb-10 px-12 bg-[var(--color-surface)]">
+        <div>
+          <p class="eyebrow mb-5 text-[var(--color-text-faint)]">Programas disponibles</p>
+          <ul class="border-t border-[var(--color-border)]">
+            {programs.map((prog) => (
+              <li>
+                <a
+                  href={prog.href}
+                  class="group flex items-baseline justify-between gap-5 py-[0.95rem] border-b border-[var(--color-border)] hover:border-[var(--color-border-strong)] transition-all duration-150"
+                >
+                  <span class="font-[family-name:var(--font-display)] font-semibold text-[0.9375rem] text-[var(--color-text-mid)] group-hover:text-[var(--color-navy)] transition-colors duration-150 leading-snug" style="font-optical-sizing: auto;">
+                    {prog.title}
+                  </span>
+                  <span class="text-[0.625rem] font-bold tracking-[0.08em] uppercase text-[var(--color-text-faint)] group-hover:text-[var(--color-gold-dark)] transition-colors whitespace-nowrap shrink-0">
+                    {prog.tag}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <!-- Campus access block -->
+          <div class="mt-8 pt-6 border-t border-[var(--color-border)]">
+            <p class="text-[0.75rem] text-[var(--color-text-faint)] mb-3">Acceso directo</p>
+            <a
+              href="https://campus.facmed.unam.mx"
+              target="_blank"
+              rel="noopener"
+              class="group inline-flex items-center gap-2 text-[0.875rem] font-semibold text-[var(--color-text-mid)] hover:text-[var(--color-navy)] transition-colors duration-150"
+            >
+              Campus virtual Fac. Medicina
+              <svg class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p class="pt-6 text-[0.75rem] text-[var(--color-text-faint)]">
+          Todos los programas son gratuitos y accesibles en línea.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- ── QUICK ACCESS ─────────────────────────────────────── -->
-  <section class="bg-white border-b border-[var(--color-border)]">
-    <div class="container-site py-10">
-      <p class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-subtle)] mb-5 text-center">¿Cuál es tu perfil?</p>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {quickAccess.map((item) => (
-          <a href={item.href}
-            class="group flex flex-col items-center gap-2 p-4 rounded-[var(--radius-lg)] border border-[var(--color-border)] hover:border-[var(--color-unam-blue)] hover:bg-[var(--color-unam-blue-light)] transition-all duration-150 text-center">
-            <span class="text-2xl">{item.icon}</span>
-            <span class="text-sm font-semibold text-[var(--color-text-base)] group-hover:text-[var(--color-unam-blue)] transition-colors leading-tight">{item.label}</span>
-            <span class="text-xs text-[var(--color-text-subtle)]">{item.desc}</span>
+  <!-- ═══════════════════════════════════════════════════════
+       PERFIL — strip de acceso rápido por usuario
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-surface)] border-y border-[var(--color-border)]">
+    <div class="container-site py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+      <span class="text-xs font-semibold uppercase tracking-widest text-[var(--color-text-faint)] shrink-0">
+        ¿Cuál es tu perfil?
+      </span>
+      <div class="flex flex-wrap gap-2">
+        {profiles.map((p) => (
+          <a
+            href={p.href}
+            class="inline-flex items-center px-4 py-1.5 rounded-full border border-[var(--color-border-strong)] text-sm font-medium text-[var(--color-text-mid)] hover:border-[var(--color-navy)] hover:text-[var(--color-navy)] hover:bg-[var(--color-navy-soft)] transition-all duration-150"
+          >
+            {p.label}
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ── STATS ────────────────────────────────────────────── -->
-  <section class="bg-[var(--color-surface)] border-b border-[var(--color-border)]">
-    <div class="container-site py-12">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat) => (
-          <div class="text-center">
-            <div class="text-3xl sm:text-4xl font-extrabold text-[var(--color-unam-blue)] mb-1">{stat.value}</div>
-            <div class="text-sm text-[var(--color-text-muted)]">{stat.label}</div>
+  <!-- ═══════════════════════════════════════════════════════
+       STATS — números grandes, izquierda alineada, en fila
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-bg)] py-10 border-b border-[var(--color-border)]">
+    <div class="container-site">
+      <div class="flex flex-col sm:flex-row gap-8 sm:gap-0 sm:divide-x divide-[var(--color-border)]">
+        {stats.map((s) => (
+          <div class="sm:pr-12 sm:last:pr-0 sm:pl-12 sm:first:pl-0">
+            <div
+              class="display tabular text-[clamp(2rem,4vw,2.75rem)] text-[var(--color-navy)] leading-none mb-1 tracking-[-0.02em]"
+              style="font-optical-sizing: auto;"
+            >
+              {s.value}
+            </div>
+            <div class="text-[0.78125rem] text-[var(--color-text-soft)] leading-snug max-w-[15ch] mt-1">{s.label}</div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ── PROGRAMS GRID ────────────────────────────────────── -->
-  <section class="bg-white py-20">
+  <!-- ═══════════════════════════════════════════════════════
+       PROGRAMAS — lista asimétrica (no grid de tarjetas)
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-surface)] py-16 border-t border-[var(--color-border)]">
     <div class="container-site">
-      <div class="text-center mb-14">
-        <p class="text-xs font-semibold uppercase tracking-widest text-[var(--color-unam-gold-dark)] mb-3">Oferta educativa</p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--color-text-base)] tracking-tight mb-4">
-          Programas y recursos en línea
-        </h2>
-        <p class="text-[var(--color-text-muted)] max-w-xl mx-auto text-base leading-relaxed">
-          Desde el diagnóstico inicial hasta la preparación para la especialidad. Todos los programas son gratuitos y accesibles.
-        </p>
+
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <p class="eyebrow mb-3">Oferta educativa</p>
+          <h2
+            class="display text-[clamp(1.75rem,3.5vw,2.5rem)] text-[var(--color-navy)]"
+            style="font-optical-sizing: auto;"
+          >
+            Programas y recursos en línea
+          </h2>
+        </div>
+        <a
+          href="/aprende-en-linea"
+          class="text-sm font-medium text-[var(--color-text-soft)] hover:text-[var(--color-navy)] transition-colors duration-150 whitespace-nowrap shrink-0"
+        >
+          Ver todos →
+        </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="border-t border-[var(--color-border)]">
         {programs.map((prog) => (
           <a
             href={prog.href}
-            class="group flex flex-col rounded-[var(--radius-xl)] border border-[var(--color-border)] bg-white hover:border-[var(--color-unam-blue)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-200 overflow-hidden"
+            class="group grid grid-cols-1 md:grid-cols-[7rem_1fr_1.5rem] gap-3 md:gap-8 items-center py-5 border-b border-[var(--color-border)] hover:border-[var(--color-border-strong)] transition-colors duration-150"
           >
-            <div class="h-1 bg-gradient-to-r from-[var(--color-unam-blue)] to-[var(--color-unam-blue-mid)] opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            <div class="p-6 flex flex-col flex-1">
-              <div class="flex items-start justify-between mb-4">
-                <div class="w-12 h-12 rounded-[var(--radius-lg)] bg-[var(--color-unam-blue-light)] flex items-center justify-center text-2xl group-hover:bg-[var(--color-unam-blue)] transition-all duration-200">
-                  {prog.icon}
-                </div>
-                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full ${prog.tagColor}`}>{prog.tag}</span>
-              </div>
-              <h3 class="font-bold text-[var(--color-text-base)] text-base mb-2 group-hover:text-[var(--color-unam-blue)] transition-colors">
+            <span class="text-[0.625rem] font-bold tracking-[0.1em] uppercase text-[var(--color-text-faint)] group-hover:text-[var(--color-gold-dark)] transition-colors leading-none">
+              {prog.tag}
+            </span>
+            <div>
+              <h3 class="font-[family-name:var(--font-display)] font-semibold text-[1.0625rem] text-[var(--color-navy)] leading-snug mb-0.5 transition-colors" style="font-optical-sizing: auto;">
                 {prog.title}
               </h3>
-              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed flex-1">
+              <p class="text-[0.8125rem] text-[var(--color-text-soft)] leading-relaxed">
                 {prog.desc}
               </p>
-              <div class="flex items-center gap-1 mt-5 text-sm font-semibold text-[var(--color-unam-blue)] opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-                Ver más
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
             </div>
+            <svg class="hidden md:block w-3.5 h-3.5 text-[var(--color-text-faint)] group-hover:text-[var(--color-navy)] group-hover:translate-x-0.5 transition-all duration-150 shrink-0 justify-self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- ── MISIÓN / VISIÓN ──────────────────────────────────── -->
-  <section class="bg-[var(--color-surface)] py-20">
-    <div class="container-site">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <!-- ═══════════════════════════════════════════════════════
+       MISIÓN — texto puro, sin cajas de ícono
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-bg)] py-20 border-t border-[var(--color-border)]">
+    <div class="container-site grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-20 lg:items-start">
+
+      <div class="flex flex-col gap-8">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-[var(--color-unam-gold-dark)] mb-3">Facultad de Medicina · UNAM</p>
-          <h2 class="text-3xl font-extrabold text-[var(--color-text-base)] tracking-tight mb-6 leading-tight">
-            Formando profesionales<br />de la salud desde hace décadas
+          <p class="eyebrow mb-5">Facultad de Medicina · UNAM</p>
+          <h2
+            class="display text-[clamp(1.75rem,3.5vw,2.5rem)] text-[var(--color-navy)] leading-[1.08]"
+            style="font-optical-sizing: auto;"
+          >
+            Formando profesionales<br/>de la salud
           </h2>
-          <div class="space-y-5">
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-unam-blue-light)] flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-5 h-5 text-[var(--color-unam-blue)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[var(--color-text-base)] text-sm mb-1">Misión</h3>
-                <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  Formar profesionales altamente calificados, éticos, críticos y humanistas, capaces de investigar y difundir el conocimiento para la solución de problemas de salud en beneficio del ser humano y de la nación.
-                </p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-unam-gold-light)] flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-5 h-5 text-[var(--color-unam-gold-dark)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-[var(--color-text-base)] text-sm mb-1">Visión</h3>
-                <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                  Estar a la vanguardia para ejercer el liderazgo en educación, investigación y difusión en salud y otras áreas científicas en beneficio del ser humano y de la nación.
-                </p>
-              </div>
-            </div>
-          </div>
-          <a href="/acerca-de"
-            class="inline-flex items-center gap-2 mt-8 px-5 py-2.5 rounded-[var(--radius-md)] bg-[var(--color-unam-blue)] text-white text-sm font-semibold hover:bg-[var(--color-unam-blue-mid)] transition-colors">
-            Conoce más sobre SUAyED
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
-
-        <!-- Visual decoration -->
-        <div class="relative hidden lg:flex items-center justify-center">
-          <div class="relative w-80 h-80">
-            <div class="absolute inset-0 rounded-full border-2 border-dashed border-[var(--color-border)]"
-              style="animation: spin 30s linear infinite;">
-            </div>
-            <div class="absolute inset-10 rounded-full bg-[var(--color-unam-blue-light)] flex items-center justify-center">
-              <div class="text-center px-4">
-                <div class="text-5xl font-extrabold text-[var(--color-unam-blue)] mb-1">45+</div>
-                <div class="text-xs font-medium text-[var(--color-text-muted)] leading-snug">años de educación<br/>a distancia</div>
-              </div>
-            </div>
-            <div class="absolute -top-2 right-8 w-14 h-14 rounded-full bg-white border border-[var(--color-border)] shadow-[var(--shadow-card)] flex items-center justify-center text-xl">🎓</div>
-            <div class="absolute bottom-4 -right-4 w-14 h-14 rounded-full bg-white border border-[var(--color-border)] shadow-[var(--shadow-card)] flex items-center justify-center text-xl">🏥</div>
-            <div class="absolute -bottom-2 left-8 w-14 h-14 rounded-full bg-white border border-[var(--color-border)] shadow-[var(--shadow-card)] flex items-center justify-center text-xl">📚</div>
-            <div class="absolute top-4 -left-4 w-14 h-14 rounded-full bg-white border border-[var(--color-border)] shadow-[var(--shadow-card)] flex items-center justify-center text-xl">💻</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA BANNER ───────────────────────────────────────── -->
-  <section class="bg-[var(--color-unam-blue)] py-16">
-    <div class="container-site text-center">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 tracking-tight">
-          ¿Listo para dar el siguiente paso?
-        </h2>
-        <p class="text-white/70 mb-8 text-base leading-relaxed">
-          Accede al campus virtual de la Facultad de Medicina y conecta con todos los recursos educativos en línea.
+        <p class="text-[0.9375rem] text-[var(--color-text-soft)] leading-[1.75] max-w-[38ch]">
+          El Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina de la UNAM lleva más de 45 años formando profesionales de la salud.
         </p>
-        <div class="flex flex-wrap gap-3 justify-center">
-          <a href="https://campus.facmed.unam.mx" target="_blank" rel="noopener"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-unam-gold)] text-[var(--color-unam-blue-dark)] font-bold text-sm hover:bg-[var(--color-unam-gold-dark)] transition-colors shadow-lg">
-            Ir al campus virtual
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-          <a href="/normatividad"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-white/10 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 transition-colors">
-            Consultar normatividad
-          </a>
+        <a
+          href="/acerca-de"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-md)] border border-[var(--color-navy)] text-[var(--color-navy)] text-sm font-semibold hover:bg-[var(--color-navy)] hover:text-[var(--color-bg)] transition-all duration-150 self-start"
+        >
+          Conoce SUAyED
+          <svg class="w-4 h-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="space-y-9 lg:pt-2">
+        <div>
+          <h3 class="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[var(--color-gold-dark)] mb-3">
+            Misión
+          </h3>
+          <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75]">
+            Formar profesionales altamente calificados, éticos, críticos y humanistas, capaces de investigar y difundir el conocimiento para la solución de problemas de salud en beneficio del ser humano y de la nación.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[var(--color-gold-dark)] mb-3">
+            Visión
+          </h3>
+          <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75]">
+            Estar a la vanguardia para ejercer el liderazgo en educación, investigación y difusión en salud y otras áreas científicas en beneficio del ser humano y de la nación.
+          </p>
         </div>
       </div>
+
     </div>
   </section>
-</Site>
 
-<style>
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-</style>
+  <!-- ═══════════════════════════════════════════════════════
+       CTA final — una línea, limpio
+  ═══════════════════════════════════════════════════════ -->
+  <section class="bg-[var(--color-navy)] py-12">
+    <div class="container-site flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <p class="font-[family-name:var(--font-display)] font-semibold text-[1.375rem] text-[var(--color-bg)] leading-snug" style="font-optical-sizing: auto;">
+          ¿Listo para dar el siguiente paso?
+        </p>
+        <p class="text-[0.8125rem] text-[oklch(74%_0.02_255)] mt-1">
+          Accede al campus virtual de la Facultad de Medicina.
+        </p>
+      </div>
+      <a
+        href="https://campus.facmed.unam.mx"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-gold)] text-[var(--color-navy)] font-bold text-sm hover:bg-[var(--color-gold-dark)] transition-colors duration-150 shrink-0"
+      >
+        Ir al campus virtual
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+</Site>

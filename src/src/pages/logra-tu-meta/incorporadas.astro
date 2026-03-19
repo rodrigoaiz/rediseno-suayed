@@ -6,76 +6,95 @@ import Site from '../../layouts/Site.astro';
   title="Logra tu Meta · Escuelas Incorporadas | SUAyED"
   description="Exámenes de autoevaluación para egresados de escuelas incorporadas a la UNAM."
 >
-  <section class="bg-[var(--color-unam-blue-dark)] relative overflow-hidden">
-    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] to-[var(--color-unam-gold-light)]"></div>
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
-    <div class="container-site py-16 md:py-20 relative z-10">
-      <nav class="flex items-center gap-2 text-xs text-white/40 mb-6">
-        <a href="/" class="hover:text-white/70 transition-colors">Inicio</a>
+  <!-- Hero -->
+  <section class="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
+    <div class="container-site py-10 lg:py-12">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-faint)] mb-8">
+        <a href="/" class="hover:text-[var(--color-navy)] transition-colors">Inicio</a>
         <span>/</span>
-        <span class="text-white/70">Logra tu Meta</span>
+        <span class="text-[var(--color-text-soft)]">Logra tu Meta</span>
         <span>/</span>
-        <span class="text-white/70">Escuelas Incorporadas</span>
+        <span class="text-[var(--color-text-soft)]">Escuelas Incorporadas</span>
       </nav>
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 mb-4">
-        <span class="text-xs font-semibold text-amber-300 tracking-wide uppercase">Escuelas Incorporadas · ENARM</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
-        Logra tu Meta<br/>
-        <span class="text-[var(--color-unam-gold)] text-3xl">Escuelas Incorporadas</span>
+      <p class="eyebrow mb-4">Escuelas Incorporadas · ENARM</p>
+      <h1
+        class="display text-[clamp(2.25rem,5vw,3.75rem)] text-[var(--color-navy)] leading-[1.04] tracking-[-0.025em] mb-5"
+        style="font-optical-sizing: auto;"
+      >
+        Logra tu Meta
       </h1>
-      <p class="text-white/65 text-lg max-w-2xl leading-relaxed">
+      <p class="text-[var(--color-text-mid)] text-[1rem] leading-[1.75] max-w-[58ch]">
         Registro y acceso a los exámenes de autoevaluación para egresados de escuelas incorporadas a la UNAM.
       </p>
     </div>
   </section>
 
-  <section class="bg-white py-16">
+  <!-- Variant selector -->
+  <section class="bg-[var(--color-surface)] border-b border-[var(--color-border)]">
     <div class="container-site">
-      <div class="max-w-3xl">
-        <!-- Variant selector -->
-        <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] overflow-hidden mb-10">
-          <div class="grid grid-cols-2">
-            <a href="/logra-tu-meta/facultad" class="p-5 border-r border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors">
-              <div class="text-sm font-bold text-[var(--color-text-muted)] mb-1">Facultad de Medicina</div>
-              <div class="text-xs text-[var(--color-text-subtle)]">Para egresados de la FacMed UNAM</div>
-            </a>
-            <a href="/logra-tu-meta/incorporadas" class="p-5 bg-[var(--color-unam-blue-light)] border-b-2 border-b-[var(--color-unam-blue)]">
-              <div class="text-sm font-bold text-[var(--color-unam-blue)] mb-1">Escuelas Incorporadas</div>
-              <div class="text-xs text-[var(--color-text-muted)]">Para egresados de escuelas incorporadas a la UNAM</div>
-            </a>
-          </div>
-        </div>
+      <div class="flex">
+        <a
+          href="/logra-tu-meta/facultad"
+          class="px-6 py-4 border-b-2 border-transparent text-[0.875rem] font-medium text-[var(--color-text-soft)] hover:text-[var(--color-navy)] hover:border-[var(--color-border-strong)] transition-colors"
+        >
+          Facultad de Medicina
+        </a>
+        <a
+          href="/logra-tu-meta/incorporadas"
+          class="px-6 py-4 border-b-2 border-[var(--color-navy)] text-[0.875rem] font-semibold text-[var(--color-navy)]"
+        >
+          Escuelas Incorporadas
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] p-8 mb-8 bg-[var(--color-surface)]">
-          <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-3">¿Eres de una escuela incorporada?</h2>
-          <p class="text-[var(--color-text-muted)] leading-relaxed">
-            Si egresaste de una escuela incorporada a la UNAM y te interesa ingresar a una especialidad médica, puedes acceder a los mismos exámenes de autoevaluación <strong class="text-[var(--color-text-base)]">"Logra tu Meta"</strong> a través de un registro específico para tu institución.
-          </p>
-        </div>
-
-        <div class="rounded-[var(--radius-lg)] border-l-4 border-[var(--color-unam-gold)] bg-[var(--color-unam-gold-light)] p-5 mb-10">
-          <p class="text-sm font-semibold text-[var(--color-unam-blue-dark)] mb-1">Requisito de registro</p>
-          <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
+  <!-- Content -->
+  <section class="bg-[var(--color-bg)] py-16 border-b border-[var(--color-border)]">
+    <div class="container-site grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-20 lg:items-start">
+      <div>
+        <p class="eyebrow mb-5">¿Eres de una escuela incorporada?</p>
+        <h2
+          class="display text-[clamp(1.5rem,3vw,2.25rem)] text-[var(--color-navy)] leading-[1.08] mb-6"
+          style="font-optical-sizing: auto;"
+        >
+          Acceso para escuelas incorporadas a la UNAM
+        </h2>
+        <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75] mb-4">
+          Si egresaste de una escuela incorporada a la UNAM y te interesa ingresar a una especialidad médica, puedes acceder a los mismos exámenes de autoevaluación <strong class="text-[var(--color-navy)] font-semibold">"Logra tu Meta"</strong> a través de un registro específico para tu institución.
+        </p>
+        <div class="border border-[var(--color-border)] rounded-[var(--radius-md)] px-5 py-4 mb-8 bg-[var(--color-surface)]">
+          <p class="text-[0.75rem] font-bold tracking-[0.08em] uppercase text-[var(--color-gold-dark)] mb-1">Requisito de registro</p>
+          <p class="text-[0.875rem] text-[var(--color-text-mid)] leading-relaxed">
             Para acceder, deberás completar el proceso de registro indicando tu escuela incorporada. Los datos de acceso son diferentes a los de la Facultad de Medicina.
           </p>
         </div>
-
-        <div class="rounded-[var(--radius-xl)] bg-[var(--color-unam-blue)] p-8 text-center">
-          <h2 class="text-2xl font-extrabold text-white mb-3">Registrarme como escuela incorporada</h2>
-          <p class="text-white/70 mb-6 text-sm">Accede al formulario de registro específico para egresados de escuelas incorporadas a la UNAM.</p>
-          <a
-            href="https://suayed.facmed.unam.mx/index.php/logratumeta-incorporadas/"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-unam-gold)] text-[var(--color-unam-blue-dark)] font-bold text-sm hover:bg-[var(--color-unam-gold-dark)] transition-colors"
-          >
-            Ir al registro
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-        </div>
+        <a
+          href="https://suayed.facmed.unam.mx/index.php/logratumeta-incorporadas/"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-[var(--radius-md)] bg-[var(--color-navy)] text-[var(--color-bg)] text-sm font-semibold hover:bg-[var(--color-navy-mid)] transition-colors duration-150"
+        >
+          Ir al registro
+          <svg class="w-4 h-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+      <div class="space-y-0 border-t border-[var(--color-border)]">
+        {[
+          { label: '01', title: 'Exámenes de autoevaluación', desc: 'Los mismos exámenes disponibles para egresados de la Facultad de Medicina.' },
+          { label: '02', title: 'Registro independiente', desc: 'Proceso de registro específico para escuelas incorporadas a la UNAM.' },
+          { label: '03', title: 'Preparación para el ENARM', desc: 'Refuerza y orienta tu preparación para el examen nacional de especialidades.' },
+        ].map((feat) => (
+          <div class="grid grid-cols-[2.5rem_1fr] gap-4 py-5 border-b border-[var(--color-border)]">
+            <span class="text-[0.625rem] font-bold tracking-[0.08em] text-[var(--color-gold-dark)] pt-0.5">{feat.label}</span>
+            <div>
+              <h3 class="font-[family-name:var(--font-display)] font-semibold text-[0.9375rem] text-[var(--color-navy)] mb-1" style="font-optical-sizing: auto;">{feat.title}</h3>
+              <p class="text-[0.8125rem] text-[var(--color-text-soft)] leading-relaxed">{feat.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>

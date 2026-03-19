@@ -2,11 +2,11 @@
 import Site from '../layouts/Site.astro';
 
 const programs = [
-  { name: 'Comunidad PREMED', href: '/aprende-en-linea/premed' },
-  { name: 'Ponte en Líne@', href: '/aprende-en-linea/ponte-en-linea' },
-  { name: 'Asignaturas Optativas a Distancia (MOLIMOD)', href: '/aprende-en-linea/asignaturas' },
-  { name: 'FundamentaleSS', href: '/fundamentaless' },
-  { name: 'Logra tu Meta', href: '/logra-tu-meta/facultad' },
+  { name: 'Comunidad PREMED', tag: 'Aspirantes', href: '/aprende-en-linea/premed' },
+  { name: 'Ponte en Líne@', tag: 'Estudiantes', href: '/aprende-en-linea/ponte-en-linea' },
+  { name: 'Asignaturas Optativas a Distancia (MOLIMOD)', tag: 'Estudiantes', href: '/aprende-en-linea/asignaturas' },
+  { name: 'FundamentaleSS', tag: 'Servicio social', href: '/fundamentaless' },
+  { name: 'Logra tu Meta', tag: 'Egresados', href: '/logra-tu-meta/facultad' },
 ];
 
 const timeline = [
@@ -21,101 +21,104 @@ const timeline = [
   title="Acerca de SUAyED FM | SUAyED"
   description="Conoce el Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina UNAM."
 >
-  <section class="bg-[var(--color-unam-blue-dark)] relative overflow-hidden">
-    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] to-[var(--color-unam-gold-light)]"></div>
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
-    <div class="container-site py-16 md:py-20 relative z-10">
-      <nav class="flex items-center gap-2 text-xs text-white/40 mb-6">
-        <a href="/" class="hover:text-white/70 transition-colors">Inicio</a>
+  <!-- Hero -->
+  <section class="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
+    <div class="container-site py-10 lg:py-12">
+      <nav class="flex items-center gap-2 text-xs text-[var(--color-text-faint)] mb-8">
+        <a href="/" class="hover:text-[var(--color-navy)] transition-colors">Inicio</a>
         <span>/</span>
-        <span class="text-white/70">Acerca de SUAyED FM</span>
+        <span class="text-[var(--color-text-soft)]">Acerca de SUAyED FM</span>
       </nav>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+      <p class="eyebrow mb-4">Institucional</p>
+      <h1
+        class="display text-[clamp(2.25rem,5vw,3.75rem)] text-[var(--color-navy)] leading-[1.04] tracking-[-0.025em] mb-5"
+        style="font-optical-sizing: auto;"
+      >
         Acerca de SUAyED FM
       </h1>
-      <p class="text-white/65 text-lg max-w-2xl leading-relaxed">
+      <p class="text-[var(--color-text-mid)] text-[1rem] leading-[1.75] max-w-[58ch]">
         El Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina de la UNAM. Más de 45 años comprometidos con la educación médica accesible.
       </p>
     </div>
   </section>
 
-  <section class="bg-white py-16">
-    <div class="container-site">
-      <div class="max-w-3xl">
-        <!-- About text -->
-        <div class="prose prose-sm max-w-none mb-12">
-          <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] p-8 bg-[var(--color-surface)] mb-8">
-            <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-4">¿Qué es el SUAyED FM?</h2>
-            <p class="text-[var(--color-text-muted)] leading-relaxed mb-4">
-              En la Universidad Nacional Autónoma de México, desde hace más de <strong class="text-[var(--color-text-base)]">45 años</strong>, el SUAyED se ha comprometido con el desarrollo de proyectos y programas de formación a distancia que tienen como objetivo <strong class="text-[var(--color-text-base)]">ampliar la cobertura de educación superior</strong>.
-            </p>
-            <p class="text-[var(--color-text-muted)] leading-relaxed">
-              A la fecha, el Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina ofrece a sus estudiantes programas que apoyan su formación profesional en diferentes momentos de su trayectoria académica.
-            </p>
-          </div>
-        </div>
+  <!-- About + Timeline -->
+  <section class="bg-[var(--color-surface)] py-16 border-b border-[var(--color-border)]">
+    <div class="container-site grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-20 lg:items-start">
+      <div>
+        <p class="eyebrow mb-5">¿Qué es el SUAyED FM?</p>
+        <h2
+          class="display text-[clamp(1.5rem,3vw,2.25rem)] text-[var(--color-navy)] leading-[1.08] mb-6"
+          style="font-optical-sizing: auto;"
+        >
+          45 años formando profesionales de la salud
+        </h2>
+        <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75] mb-4">
+          En la Universidad Nacional Autónoma de México, desde hace más de <strong class="text-[var(--color-navy)] font-semibold">45 años</strong>, el SUAyED se ha comprometido con el desarrollo de proyectos y programas de formación a distancia que tienen como objetivo <strong class="text-[var(--color-navy)] font-semibold">ampliar la cobertura de educación superior</strong>.
+        </p>
+        <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75]">
+          A la fecha, el Sistema Universidad Abierta y Educación a Distancia de la Facultad de Medicina ofrece a sus estudiantes programas que apoyan su formación profesional en diferentes momentos de su trayectoria académica.
+        </p>
+      </div>
 
-        <!-- Programs -->
-        <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-5">Programas que ofrece</h2>
-        <div class="space-y-2 mb-12">
-          {programs.map((prog, i) => (
-            <a
-              href={prog.href}
-              class="group flex items-center justify-between px-5 py-4 rounded-[var(--radius-lg)] border border-[var(--color-border)] hover:border-[var(--color-unam-blue)] hover:bg-[var(--color-unam-blue-light)] transition-all duration-150"
-            >
-              <div class="flex items-center gap-3">
-                <span class="w-6 h-6 rounded-full bg-[var(--color-unam-blue)] text-white text-xs font-bold flex items-center justify-center shrink-0">
-                  {i + 1}
-                </span>
-                <span class="text-sm font-medium text-[var(--color-text-base)] group-hover:text-[var(--color-unam-blue)] transition-colors">{prog.name}</span>
-              </div>
-              <svg class="w-4 h-4 text-[var(--color-text-subtle)] group-hover:text-[var(--color-unam-blue)] group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          ))}
-        </div>
-
-        <!-- Timeline -->
-        <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-6">Trayectoria histórica</h2>
-        <div class="relative pl-6 border-l-2 border-[var(--color-border)] space-y-8 mb-12">
-          {timeline.map((item, i) => (
+      <!-- Timeline -->
+      <div>
+        <p class="eyebrow mb-6">Trayectoria</p>
+        <div class="relative pl-5 border-l border-[var(--color-border)] space-y-8">
+          {timeline.map((item) => (
             <div class="relative">
-              <div class="absolute -left-[2.125rem] w-4 h-4 rounded-full bg-white border-2 border-[var(--color-unam-blue)] flex items-center justify-center">
-                <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-unam-blue)]"></div>
-              </div>
-              <div class="text-xs font-bold text-[var(--color-unam-gold-dark)] uppercase tracking-wide mb-1">{item.year}</div>
-              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{item.event}</p>
+              <div class="absolute -left-[1.4rem] w-2.5 h-2.5 rounded-full bg-[var(--color-bg)] border-2 border-[var(--color-gold-dark)] mt-0.5"></div>
+              <div class="text-[0.625rem] font-bold tracking-[0.1em] uppercase text-[var(--color-gold-dark)] mb-1">{item.year}</div>
+              <p class="text-[0.875rem] text-[var(--color-text-mid)] leading-relaxed">{item.event}</p>
             </div>
           ))}
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Misión y Visión -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="rounded-[var(--radius-xl)] bg-[var(--color-unam-blue-light)] border border-[var(--color-unam-blue)]/20 p-6">
-            <h3 class="font-bold text-[var(--color-unam-blue)] mb-3 flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Misión
-            </h3>
-            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Formar profesionales altamente calificados, éticos, críticos y humanistas, capaces de investigar y difundir el conocimiento para la solución de problemas de salud en beneficio del ser humano y de la nación.
-            </p>
-          </div>
-          <div class="rounded-[var(--radius-xl)] bg-[var(--color-unam-gold-light)] border border-[var(--color-unam-gold)]/30 p-6">
-            <h3 class="font-bold text-[var(--color-unam-gold-dark)] mb-3 flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              Visión
-            </h3>
-            <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Estar a la vanguardia para ejercer el liderazgo en educación, investigación y difusión en salud y otras áreas científicas en beneficio del ser humano y de la nación.
-            </p>
-          </div>
-        </div>
+  <!-- Programs -->
+  <section class="bg-[var(--color-bg)] py-16 border-b border-[var(--color-border)]">
+    <div class="container-site">
+      <p class="eyebrow mb-8">Programas que ofrece</p>
+      <div class="border-t border-[var(--color-border)] max-w-3xl">
+        {programs.map((prog) => (
+          <a
+            href={prog.href}
+            class="group grid grid-cols-[7rem_1fr_1.5rem] gap-8 items-center py-5 border-b border-[var(--color-border)] hover:border-[var(--color-border-strong)] transition-colors duration-150"
+          >
+            <span class="text-[0.625rem] font-bold tracking-[0.1em] uppercase text-[var(--color-text-faint)] group-hover:text-[var(--color-gold-dark)] transition-colors leading-none">
+              {prog.tag}
+            </span>
+            <span
+              class="font-[family-name:var(--font-display)] font-semibold text-[1rem] text-[var(--color-navy)] leading-snug"
+              style="font-optical-sizing: auto;"
+            >
+              {prog.name}
+            </span>
+            <svg class="w-3.5 h-3.5 text-[var(--color-text-faint)] group-hover:text-[var(--color-navy)] group-hover:translate-x-0.5 transition-all duration-150 shrink-0 justify-self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión / Visión -->
+  <section class="bg-[var(--color-surface)] py-16">
+    <div class="container-site grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-20">
+      <div>
+        <p class="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[var(--color-gold-dark)] mb-4">Misión</p>
+        <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75]">
+          Formar profesionales altamente calificados, éticos, críticos y humanistas, capaces de investigar y difundir el conocimiento para la solución de problemas de salud en beneficio del ser humano y de la nación.
+        </p>
+      </div>
+      <div>
+        <p class="text-[0.65rem] font-bold tracking-[0.12em] uppercase text-[var(--color-gold-dark)] mb-4">Visión</p>
+        <p class="text-[0.9375rem] text-[var(--color-text-mid)] leading-[1.75]">
+          Estar a la vanguardia para ejercer el liderazgo en educación, investigación y difusión en salud y otras áreas científicas en beneficio del ser humano y de la nación.
+        </p>
       </div>
     </div>
   </section>
