@@ -1,0 +1,91 @@
+---
+import Site from '../../layouts/Site.astro';
+
+const subpages = [
+  {
+    icon: '🎓',
+    title: 'Comunidad PREMED',
+    desc: 'Diagnóstico de conocimientos del bachillerato. Evalúa tu salud académica integral antes de iniciar la licenciatura.',
+    href: '/aprende-en-linea/premed',
+    tag: 'Aspirantes',
+  },
+  {
+    icon: '💻',
+    title: 'Ponte en Líne@',
+    desc: 'Tutorías, seminarios y recursos educativos para reforzar tu aprendizaje durante la licenciatura.',
+    href: '/aprende-en-linea/ponte-en-linea',
+    tag: 'Estudiantes',
+  },
+  {
+    icon: '📚',
+    title: 'Asignaturas en línea (MOLIMOD)',
+    desc: '32 optativas a distancia con contenidos innovadores. Disponibles en cualquier momento y desde cualquier lugar.',
+    href: '/aprende-en-linea/asignaturas',
+    tag: 'Estudiantes',
+  },
+  {
+    icon: '⚡',
+    title: 'Periodos intensivos',
+    desc: 'Cursa asignaturas optativas en dos semanas de trabajo intenso. Para estudiantes de 1° a 4° año.',
+    href: '/aprende-en-linea/periodos-intensivos',
+    tag: 'Estudiantes',
+  },
+];
+---
+
+<Site
+  title="Aprende en línea | SUAyED"
+  description="Hub de programas educativos en línea de la Facultad de Medicina UNAM."
+>
+  <!-- Page hero -->
+  <section class="bg-[var(--color-unam-blue-dark)] relative overflow-hidden">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] to-[var(--color-unam-gold-light)]"></div>
+    <div class="absolute inset-0 opacity-[0.03]"
+      style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;">
+    </div>
+    <div class="container-site py-16 md:py-20 relative z-10">
+      <nav class="flex items-center gap-2 text-xs text-white/40 mb-6">
+        <a href="/" class="hover:text-white/70 transition-colors">Inicio</a>
+        <span>/</span>
+        <span class="text-white/70">Aprende en línea</span>
+      </nav>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Aprende en línea
+      </h1>
+      <p class="text-white/65 text-lg max-w-2xl leading-relaxed">
+        Un conjunto de programas y recursos digitales diseñados por la Facultad de Medicina de la UNAM para acompañarte en cada etapa de tu formación: desde antes de ingresar hasta la preparación para la especialidad.
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="bg-white py-16">
+    <div class="container-site">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {subpages.map((page) => (
+          <a
+            href={page.href}
+            class="group flex gap-5 p-6 rounded-[var(--radius-xl)] border border-[var(--color-border)] hover:border-[var(--color-unam-blue)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-200"
+          >
+            <div class="w-14 h-14 rounded-[var(--radius-lg)] bg-[var(--color-unam-blue-light)] flex items-center justify-center text-2xl shrink-0 group-hover:bg-[var(--color-unam-blue)] transition-colors duration-200">
+              {page.icon}
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-2 mb-1.5">
+                <h2 class="font-bold text-[var(--color-text-base)] group-hover:text-[var(--color-unam-blue)] transition-colors">{page.title}</h2>
+                <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-[var(--color-unam-blue-light)] text-[var(--color-unam-blue)] shrink-0">{page.tag}</span>
+              </div>
+              <p class="text-sm text-[var(--color-text-muted)] leading-relaxed">{page.desc}</p>
+              <div class="flex items-center gap-1 mt-3 text-sm font-semibold text-[var(--color-unam-blue)] opacity-0 group-hover:opacity-100 transition-opacity">
+                Entrar
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Site>

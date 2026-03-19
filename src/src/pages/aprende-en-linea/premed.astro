@@ -1,0 +1,88 @@
+---
+import Site from '../../layouts/Site.astro';
+---
+
+<Site
+  title="Comunidad PREMED | SUAyED"
+  description="Diagnostica tus conocimientos del bachillerato antes de ingresar a la licenciatura de Médico Cirujano."
+>
+  <section class="bg-[var(--color-unam-blue-dark)] relative overflow-hidden">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] to-[var(--color-unam-gold-light)]"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="container-site py-16 md:py-20 relative z-10">
+      <nav class="flex items-center gap-2 text-xs text-white/40 mb-6">
+        <a href="/" class="hover:text-white/70 transition-colors">Inicio</a>
+        <span>/</span>
+        <a href="/aprende-en-linea" class="hover:text-white/70 transition-colors">Aprende en línea</a>
+        <span>/</span>
+        <span class="text-white/70">Comunidad PREMED</span>
+      </nav>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 mb-4">
+        <span class="text-xs font-semibold text-emerald-300 tracking-wide uppercase">Para aspirantes</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Comunidad PREMED
+      </h1>
+      <p class="text-white/65 text-lg max-w-2xl leading-relaxed">
+        ¿Terminaste el bachillerato y deseas ingresar a una licenciatura del área de la salud? Únete y revisa tu salud académica integral.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="container-site">
+      <div class="max-w-3xl">
+        <!-- Intro card -->
+        <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] p-8 mb-10 bg-[var(--color-surface)]">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-[var(--radius-lg)] bg-[var(--color-unam-blue-light)] flex items-center justify-center text-2xl shrink-0">🎓</div>
+            <div>
+              <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-2">¿Qué es Comunidad PREMED?</h2>
+              <p class="text-[var(--color-text-muted)] leading-relaxed">
+                Es un sitio electrónico creado por la Facultad de Medicina de la UNAM para ayudarte a <strong class="text-[var(--color-text-base)]">diagnosticar y revisar los conocimientos del bachillerato</strong> que son necesarios para cursar de manera más eficiente las asignaturas al inicio de tu licenciatura.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-6">¿Qué encontrarás?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          {[
+            { icon: '🔍', title: 'Diagnóstico académico', desc: 'Evalúa tus conocimientos previos en ciencias básicas para la salud.' },
+            { icon: '📊', title: 'Retroalimentación inmediata', desc: 'Identifica áreas de oportunidad antes de iniciar la carrera.' },
+            { icon: '📖', title: 'Recursos de repaso', desc: 'Materiales de estudio para nivelar conocimientos del bachillerato.' },
+            { icon: '🌐', title: 'Acceso libre', desc: 'Disponible en línea para todos los aspirantes a licenciaturas del área de la salud.' },
+          ].map((feat) => (
+            <div class="flex gap-3 p-4 rounded-[var(--radius-lg)] border border-[var(--color-border)]">
+              <span class="text-xl shrink-0 mt-0.5">{feat.icon}</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-base)] text-sm mb-1">{feat.title}</h3>
+                <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">{feat.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- CTA -->
+        <div class="rounded-[var(--radius-xl)] bg-[var(--color-unam-blue)] p-8 text-center">
+          <h2 class="text-2xl font-extrabold text-white mb-3">¿Listo para evaluar tu preparación?</h2>
+          <p class="text-white/70 mb-6 text-sm leading-relaxed">
+            Ingresa a Comunidad PREMED y descubre en qué áreas necesitas reforzar antes de iniciar tu licenciatura.
+          </p>
+          <a
+            href="https://suayed.facmed.unam.mx/index.php/aprendeenlinea/premed/"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-unam-gold)] text-[var(--color-unam-blue-dark)] font-bold text-sm hover:bg-[var(--color-unam-gold-dark)] transition-colors"
+          >
+            Acceder a Comunidad PREMED
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Site>

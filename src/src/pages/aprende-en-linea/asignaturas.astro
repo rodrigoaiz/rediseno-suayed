@@ -1,0 +1,96 @@
+---
+import Site from '../../layouts/Site.astro';
+---
+
+<Site
+  title="Asignaturas modalidad en línea | SUAyED"
+  description="32 asignaturas optativas MOLIMOD a distancia de la Facultad de Medicina UNAM."
+>
+  <section class="bg-[var(--color-unam-blue-dark)] relative overflow-hidden">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-unam-gold)] to-[var(--color-unam-gold-light)]"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="container-site py-16 md:py-20 relative z-10">
+      <nav class="flex items-center gap-2 text-xs text-white/40 mb-6">
+        <a href="/" class="hover:text-white/70 transition-colors">Inicio</a>
+        <span>/</span>
+        <a href="/aprende-en-linea" class="hover:text-white/70 transition-colors">Aprende en línea</a>
+        <span>/</span>
+        <span class="text-white/70">Asignaturas en línea</span>
+      </nav>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 mb-4">
+        <span class="text-xs font-semibold text-blue-300 tracking-wide uppercase">MOLIMOD</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        Asignaturas modalidad en línea
+      </h1>
+      <p class="text-white/65 text-lg max-w-2xl leading-relaxed">
+        Optativas innovadoras y a la vanguardia de la ciencia médica, disponibles completamente a distancia.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="container-site">
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-4 mb-12">
+        {[
+          { value: '32', label: 'optativas MOLIMOD', sub: 'solo en modalidad a distancia' },
+          { value: '70', label: 'optativas totales', sub: 'en el sistema de la Facultad' },
+          { value: '3', label: 'en ambas modalidades', sub: 'presencial y a distancia' },
+        ].map((s) => (
+          <div class="text-center p-6 rounded-[var(--radius-xl)] bg-[var(--color-surface)] border border-[var(--color-border)]">
+            <div class="text-3xl font-extrabold text-[var(--color-unam-blue)] mb-1">{s.value}</div>
+            <div class="text-sm font-semibold text-[var(--color-text-base)]">{s.label}</div>
+            <div class="text-xs text-[var(--color-text-subtle)] mt-0.5">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+
+      <div class="max-w-3xl">
+        <div class="rounded-[var(--radius-xl)] border border-[var(--color-border)] p-8 mb-8 bg-[var(--color-surface)]">
+          <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-3">¿Qué es una asignatura optativa?</h2>
+          <p class="text-[var(--color-text-muted)] leading-relaxed mb-4">
+            Las optativas son asignaturas con contenidos complementarios a las obligatorias, con mayor nivel de especificidad o con temas producto de investigaciones recientes. Por ello cuentan con temas a profundidad, innovadores y a la vanguardia en la ciencia médica, socio-médica y humanística.
+          </p>
+          <p class="text-[var(--color-text-muted)] leading-relaxed">
+            Contribuyen a la <strong class="text-[var(--color-text-base)]">formación integral del médico cirujano</strong>, expandiendo su visión más allá del currículo obligatorio.
+          </p>
+        </div>
+
+        <h2 class="text-xl font-bold text-[var(--color-text-base)] mb-5">Características del MOLIMOD</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          {[
+            { icon: '🌐', title: '100% a distancia', desc: 'Sin necesidad de asistir físicamente a la Facultad.' },
+            { icon: '⏰', title: 'Horario flexible', desc: 'Estudia a tu ritmo dentro del periodo académico.' },
+            { icon: '🔬', title: 'Contenido de vanguardia', desc: 'Temas actualizados con las últimas investigaciones en medicina.' },
+            { icon: '🎓', title: 'Valor curricular', desc: 'Cuentan con valor en créditos equivalente a las optativas presenciales.' },
+          ].map((feat) => (
+            <div class="flex gap-3 p-4 rounded-[var(--radius-lg)] border border-[var(--color-border)]">
+              <span class="text-xl shrink-0">{feat.icon}</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-base)] text-sm mb-1">{feat.title}</h3>
+                <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">{feat.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="rounded-[var(--radius-xl)] bg-[var(--color-unam-blue)] p-8 text-center">
+          <h2 class="text-2xl font-extrabold text-white mb-3">Consulta el catálogo completo</h2>
+          <p class="text-white/70 mb-6 text-sm">Conoce todas las asignaturas MOLIMOD disponibles y sus periodos de inscripción.</p>
+          <a
+            href="https://suayed.facmed.unam.mx/index.php/aprendeenlinea/molimod/"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)] bg-[var(--color-unam-gold)] text-[var(--color-unam-blue-dark)] font-bold text-sm hover:bg-[var(--color-unam-gold-dark)] transition-colors"
+          >
+            Ver asignaturas disponibles
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Site>
